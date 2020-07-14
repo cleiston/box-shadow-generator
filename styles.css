@@ -1,0 +1,107 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    display: flex;
+    height: 100vh;
+    width: 100vw;
+    font-family: sans-serif;
+    font-size: 15px;
+}
+
+.box-container {
+    display: flex;
+    flex-grow: 1;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--background-color, #fff);
+}
+
+.sidebar {
+    min-width: 130px;
+    width: 20%;
+    display: flex;
+    flex-direction: column;
+    padding: 1rem;
+    background-color: #222;
+    color: #fff;
+}
+
+.sidebar label {
+    margin-top: 1rem;
+    margin-bottom: .5rem;
+    font-weight: bold;
+}
+
+.divider {
+    margin: 1rem -1rem .4rem -1rem;
+    border-bottom: 1px solid #999;
+}
+
+#box {
+    width: 100px;
+    height: 100px;
+    background-color: var(--box-color, #0055ff);
+    margin:25px;
+    box-shadow: 
+        calc(var(--x-position, 3) * 1px)
+        calc(var(--y-position, 3) * 1px)
+        calc(var(--blur, 5) * 1px)
+        calc(var(--spread, 6) * 1px)
+        var(--shadow-color, #000);
+}
+
+input:not([type="color"]) {
+    padding: .25em .5em;
+    font-family: inherit;
+    font-size: inherit;
+    border: 1px solid transparent;
+    border-radius: .3em;
+    outline: none;
+}
+
+input:not([type="color"]):focus {
+    border-color: #0af;
+}
+
+input[type="color"] {
+    width: 80%;
+    border-radius: .3em;
+    background-color: #fff;
+    border: none;
+    cursor: pointer;
+    padding: 0 .25rem;
+}
+
+#output {
+    background-color: #fff;
+    width: 200px;
+    height: 100px;
+    padding: 1rem;
+    color: black;
+    margin-top: 1rem;
+}
+
+.display-settings {
+    display: flex;
+    flex-direction: column;
+}
+
+.display-settings > div {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: start;
+    flex-direction: row-reverse;
+}
+
+.display-settings > div > input {
+    width: 50px;
+}
+
+.display-settings > div > label {
+    margin-left: 1rem;
+}
